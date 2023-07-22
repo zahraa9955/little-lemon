@@ -1,0 +1,94 @@
+header {
+	/* background-color: red; */
+}
+
+header > nav {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 1pc;
+	align-items: center;
+	padding: 1.5pc 0px;
+}
+
+header > nav > .desktop {
+	display: grid;
+	grid-auto-flow: column;
+	justify-items: center;
+	box-shadow: #333333;
+}
+
+header > nav > .mobile {
+	display: none;
+}
+
+header > nav > ul > li > a {
+	text-decoration: none;
+	transition: border-bottom 0.1s ease;
+	font-weight: bold;
+}
+
+header > nav > ul > li > a:hover {
+	border-bottom: 3px solid black;
+	padding-bottom: 2px;
+}
+
+.burger {
+	cursor: pointer;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.mob-menu {
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 95%;
+	display: flex;
+	flex-direction: column;
+}
+
+.mob-menu-nav li {
+	padding: 2pc 3pc;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.mob-menu i {
+	cursor: pointer;
+	margin: 10px;
+	border: none;
+	background: none;
+	text-align: right;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.close-menu {
+	align-self: end;
+}
+
+.d-none {
+	display: none !important;
+}
+
+@media (max-width: 1024px) {
+	header > nav {
+		grid-template-columns: 1fr max-content;
+		justify-content: space-between;
+	}
+
+	header > nav > .desktop {
+		display: none;
+	}
+
+	header > nav > .mobile {
+		display: flex;
+		flex-direction: column;
+	}
+}

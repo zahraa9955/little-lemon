@@ -1,0 +1,49 @@
+.menu {
+	overflow: hidden;
+	z-index: -2;
+}
+
+.menu > div:first-child {
+	align-items: center;
+}
+
+img[alt="curve3"] {
+	z-index: -1;
+	width: 282px;
+	top: 0px;
+	right: 0px;
+}
+
+img[alt="dish"] {
+	/* margin-right: -10pc; */
+	width: 314px;
+}
+
+/* Menu Cards Section */
+
+.menu-cards .menu-title {
+	border-bottom: 3px solid black;
+	width: max-content;
+	padding-bottom: 10px;
+	margin: auto;
+}
+
+.menu-cards .cards {
+	display: grid;
+	grid-template-columns: repeat(3, 3fr);
+	gap: 2pc;
+}
+
+@media (max-width: 1024px) {
+	article > :first-child {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	article > :first-child > div:nth-child(2) {
+		display: none;
+	}
+
+	.menu-cards .cards {
+		grid-template-columns: 1fr;
+	}
+}

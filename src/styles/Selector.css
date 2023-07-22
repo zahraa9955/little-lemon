@@ -1,0 +1,54 @@
+.selector {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	height: 50px;
+	margin-top: 15px;
+}
+
+.selector * {
+	color: #495e57;
+}
+
+.selector i {
+	font-size: 2rem;
+	margin-right: 10px;
+}
+
+.selector img {
+	margin-left: 10px;
+}
+
+.options {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	animation: slideDown 0.5s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
+
+.option {
+	width: 100%;
+	padding: 20px 0px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.option:not(:last-child) {
+	border-bottom: 1px solid black;
+}
+
+@keyframes slideDown {
+	0% {
+		max-height: 0;
+		opacity: 0;
+	}
+	100% {
+		max-height: 1000px;
+		opacity: 1;
+	}
+}

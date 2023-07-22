@@ -1,0 +1,27 @@
+.required {
+	color: red !important;
+}
+
+.form-group {
+	margin-top: 2pc;
+}
+
+.form-group > label > input {
+	width: 100%;
+	background-color: #edefee;
+	border: none;
+	border-radius: 5px;
+	height: 50px;
+	margin-top: 15px;
+	text-indent: 10px;
+}
+
+.form-group > label > span {
+	margin: 0px 10px;
+}
+
+.dateAndTime {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 3pc;
+}

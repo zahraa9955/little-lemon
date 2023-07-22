@@ -1,0 +1,54 @@
+/* Story Section */
+.story {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	column-gap: 3pc;
+	/* height: 30pc; */
+}
+
+.story > div:last-child {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.story > div:last-child > div {
+	position: absolute;
+	top: 0;
+}
+.story > div:last-child > div:first-child {
+	right: 0pc;
+}
+
+.story > div:last-child > div:last-child {
+	top: 6pc;
+	right: 10pc;
+	z-index: -1;
+}
+
+.story > div:last-child > div > .img-container {
+	width: 258px;
+	height: 325px;
+	overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+}
+
+.story > div:last-child > div > .img-container > img {
+	width: 32pc;
+	right: -20px;
+	object-fit: cover;
+	position: absolute;
+}
+
+@media (max-width: 1024px) {
+	.story {
+		grid-template-columns: 1fr;
+	}
+
+	.story > div:last-child {
+		display: none;
+	}
+}

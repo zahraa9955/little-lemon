@@ -1,0 +1,21 @@
+.res-adv {
+	z-index: -2;
+	overflow: hidden;
+	height: 25pc;
+	position: relative;
+}
+
+img[alt="curve4"] {
+	position: absolute;
+	opacity: 40%;
+	left: 1pc;
+	top: 0px;
+	transform: rotate(40deg);
+	width: 30pc;
+	z-index: -1;
+}
+
+img[alt="res-img"] {
+	right: 0;
+	width: 35pc;
+}

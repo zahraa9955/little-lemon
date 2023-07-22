@@ -1,0 +1,179 @@
+.about-overlay {
+	position: absolute;
+	z-index: -2;
+	width: 100%;
+	height: 22rem;
+	top: 0;
+	overflow: hidden;
+}
+
+.story > div:first-child {
+	align-self: start;
+}
+
+.about-curve-overlay {
+	top: 0;
+}
+
+/* Story 2 Section */
+
+.story-2 {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	column-gap: 3pc;
+}
+
+.story-2 > div:first-child {
+	justify-self: start;
+	display: flex;
+	align-items: center;
+}
+
+.story-2 > div:last-child {
+	justify-self: end;
+}
+
+.story-2 > div:first-child > img:last-child {
+	margin-left: -6pc;
+	width: 17pc;
+}
+
+.story-2 > div:first-child > img:first-child {
+	width: 30pc;
+}
+
+/* Team Section */
+.team-section-overlay {
+	background-color: #fbdabb;
+	opacity: 40%;
+	top: 0;
+	width: 100%;
+	height: 400px;
+	z-index: -1;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.team-section > div > h1:first-child {
+	margin: 5pc 0pc;
+}
+
+.team-cards {
+	display: grid;
+	grid-template-columns: 2fr repeat(2, 1fr);
+	grid-auto-flow: column;
+}
+
+.mario-card,
+.adrian-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1pc;
+}
+
+.team-card {
+	grid-column: span 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.team-card > p {
+	flex-grow: 1;
+}
+
+.team-cards > div > div:last-child {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.team-cards img[alt="mario and adrian"] {
+	width: 100px;
+	object-fit: cover;
+}
+
+.team-cards img[alt~="socail"] {
+	width: 50px;
+	border: 2px solid black;
+	border-radius: 1000px;
+}
+
+/* Team Section */
+
+.faqs {
+	margin-top: 5pc;
+}
+
+.faq-card-header {
+	padding: 1pc 1pc;
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.faq-card-header-open {
+}
+
+.faq-card-header button {
+	border: none;
+	cursor: pointer;
+	background: none;
+}
+
+.faq-card-body {
+	margin-top: 1pc;
+	background-color: #edefee;
+	padding: 1pc 1pc;
+	border-radius: 2.5px;
+	max-height: 0;
+	overflow: hidden;
+	animation: slideDown 0.5s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
+
+@keyframes slideDown {
+	0% {
+		max-height: 0;
+		opacity: 0;
+	}
+	100% {
+		max-height: 1000px; /* Adjust this value to fit your content */
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1024px) {
+	.story-2 {
+		grid-auto-flow: row;
+		grid-template-columns: 1fr;
+		justify-content: center;
+		row-gap: 2pc;
+	}
+	.about-overlay {
+		height: -webkit-fill-available;
+	}
+
+	.story-2 > div {
+		justify-self: center !important;
+		text-align: center;
+	}
+
+	.story-2 > div:first-child > img:first-child {
+		width: max-content;
+	}
+
+	.story-2 > div:first-child > img:last-child {
+		margin-left: -9pc;
+		width: max-content;
+	}
+	.team-cards {
+		grid-template-columns: 1fr;
+		grid-auto-flow: row;
+	}
+	.team-card {
+		grid-column: initial;
+	}
+}
